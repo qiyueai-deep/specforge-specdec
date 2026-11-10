@@ -1,0 +1,20 @@
+__pycache__/
+*.py[cod]
+.venv/
+
+# Downloaded Qwen3 weights (multi-GB, re-downloadable via hf_download_models.py)
+/.model_cache/
+
+# Trained checkpoints (regeneratable via run_all.py / run_research_pipeline.py)
+*.pt
+
+# Scratch output directories
+/tmp/
+
+# LaTeX build artefacts (the .tex source and the final PDF are kept)
+latex/*.aux
+latex/*.log
+latex/*.out
+latex/*.fls
+latex/*.fdb_latexmk
+latex/*.synctex.gz

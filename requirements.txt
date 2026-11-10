@@ -1,0 +1,12 @@
+# Core dependencies: training, distillation, the self-built CPU benchmark and plots.
+torch>=2.4,<3
+matplotlib>=3.8,<4
+
+# The Hugging Face path is optional and installed separately:
+#   pip install -r requirements-hf.txt
+# It is required for two things only:
+#   1. the full 15-test suite (tests/test_core.py runs a real
+#      assisted-generation end-to-end case on locally built random models);
+#   2. the real-model entry points hf_download_models.py / hf_validate_models.py
+#      / hf_pycharm_run.py.
+# Without it the CPU pipeline trains, benchmarks and plots normally.
