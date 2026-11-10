@@ -1,0 +1,89 @@
+{
+  "results": [
+    {
+      "n_sequences": 400,
+      "tokens_per_sequence": 24,
+      "draft_k": 8,
+      "temperature": 1.0,
+      "observed_tv_unigram": 0.029687500000000006,
+      "tv_ci_unigram": [
+        0.03853906249999999,
+        0.07146093749999999
+      ],
+      "p_value": 1.0,
+      "null_tv_critical": 0.06166666666666666,
+      "observed_tv_bigram": 0.052391304347826094,
+      "reject_h0": false,
+      "power_curve": [
+        {
+          "effect": 0.01,
+          "power": 0.645
+        },
+        {
+          "effect": 0.02,
+          "power": 1.0
+        },
+        {
+          "effect": 0.05,
+          "power": 1.0
+        },
+        {
+          "effect": 0.1,
+          "power": 1.0
+        }
+      ],
+      "exact_greedy": true,
+      "spec_seconds": 0.07610809989273548,
+      "baseline_seconds": 0.11004210007376969,
+      "stochastic_speedup": 1.4458658175523997,
+      "label": "T=1.0",
+      "top_k": null
+    },
+    {
+      "n_sequences": 400,
+      "tokens_per_sequence": 24,
+      "draft_k": 8,
+      "temperature": 0.8,
+      "observed_tv_unigram": 0.02,
+      "tv_ci_unigram": [
+        0.023333333333333338,
+        0.056877604166666665
+      ],
+      "p_value": 1.0,
+      "null_tv_critical": 0.05343750000000001,
+      "observed_tv_bigram": 0.02619565217391304,
+      "reject_h0": false,
+      "power_curve": [
+        {
+          "effect": 0.01,
+          "power": 0.605
+        },
+        {
+          "effect": 0.02,
+          "power": 0.995
+        },
+        {
+          "effect": 0.05,
+          "power": 1.0
+        },
+        {
+          "effect": 0.1,
+          "power": 1.0
+        }
+      ],
+      "exact_greedy": true,
+      "spec_seconds": 0.0656672001350671,
+      "baseline_seconds": 0.09877869999036193,
+      "stochastic_speedup": 1.504231942083562,
+      "label": "T=0.8, top_k=10",
+      "top_k": 10
+    }
+  ],
+  "protocol": {
+    "n_samples": 400,
+    "n_tokens": 24,
+    "draft_k": 8,
+    "test": "parametric bootstrap under pooled multinomial H0",
+    "note": "sequences are independent draws, not paired by seed"
+  }
+}
