@@ -1,0 +1,421 @@
+{
+  "environment": {
+    "torch_version": "2.11.0+cpu",
+    "torch_threads": 1,
+    "device": "cpu",
+    "prompt_count": 6,
+    "prompt_tokens": 18,
+    "prompt_split": "held_out",
+    "new_tokens": 64,
+    "repeats": 5,
+    "warmups": 2,
+    "mode": "sample",
+    "temperature": 1.0,
+    "top_k": null,
+    "use_compile": false,
+    "acceptance_definition": "accepted / verified (risk set)"
+  },
+  "baseline": {
+    "median_total_seconds": 1.621883199783042,
+    "tokens_per_second": 236.7618087735093,
+    "mean_target_decode_calls": 64,
+    "request_telemetry": {
+      "request_count": 30,
+      "latency_seconds": {
+        "p50": 0.26480609993450344,
+        "p95": 0.31216435490641736,
+        "mean": 0.27087077664521836
+      },
+      "time_to_first_token_seconds": {
+        "p50": 0.007990599842742085,
+        "p95": 0.009904495126102118
+      },
+      "prefill_seconds": {
+        "p50": 0.007780550047755241,
+        "p95": 0.009714795055333524
+      },
+      "cache_peak_tokens": {
+        "target_max": 82,
+        "draft_max": 0
+      },
+      "decoder_health": {
+        "acceptance_rate": 0.0,
+        "naive_acceptance_rate_audit_only": 0.0,
+        "censored_fraction": 0.0,
+        "rollback_rate_per_round": 0.0,
+        "rollback_rate_per_proposed_token": 0.0,
+        "mean_target_decode_calls": 64.0
+      }
+    }
+  },
+  "speculative": [
+    {
+      "draft_k": 4,
+      "median_total_seconds": 1.3039959000889212,
+      "tokens_per_second": 294.47945348126825,
+      "wall_clock_speedup": 1.2437793705275022,
+      "speedup_ci95": [
+        1.190505535380408,
+        1.2905940093731794
+      ],
+      "mean_acceptance_rate": 0.9870537958773253,
+      "mean_naive_acceptance_rate": 0.9601571268237935,
+      "mean_censored_fraction": 0.027609427609427608,
+      "mean_target_decode_calls": 27.0,
+      "target_call_reduction": 0.578125,
+      "target_token_ratio": 1.0338541666666667,
+      "greedy_exact_match_rate": 0.0,
+      "rollback_events": 4,
+      "request_telemetry": {
+        "request_count": 30,
+        "latency_seconds": {
+          "p50": 0.2148598498897627,
+          "p95": 0.2505506299203262,
+          "mean": 0.21976183999019364
+        },
+        "time_to_first_token_seconds": {
+          "p50": 0.018670049961656332,
+          "p95": 0.026261004898697135
+        },
+        "prefill_seconds": {
+          "p50": 0.008336399914696813,
+          "p95": 0.010935699986293911
+        },
+        "cache_peak_tokens": {
+          "target_max": 82,
+          "draft_max": 82
+        },
+        "decoder_health": {
+          "acceptance_rate": 0.9870537958773252,
+          "naive_acceptance_rate_audit_only": 0.9601571268237935,
+          "censored_fraction": 0.027609427609427608,
+          "rollback_rate_per_round": 0.04938271604938271,
+          "rollback_rate_per_proposed_token": 0.012658227848101266,
+          "mean_target_decode_calls": 27.0
+        }
+      }
+    },
+    {
+      "draft_k": 8,
+      "median_total_seconds": 1.0523150004446507,
+      "tokens_per_second": 364.909746452101,
+      "wall_clock_speedup": 1.5412525708535212,
+      "speedup_ci95": [
+        1.2656964810468463,
+        1.7881003007626672
+      ],
+      "mean_acceptance_rate": 0.9744771533353157,
+      "mean_naive_acceptance_rate": 0.9072222222222223,
+      "mean_censored_fraction": 0.07666666666666666,
+      "mean_target_decode_calls": 17.0,
+      "target_call_reduction": 0.734375,
+      "target_token_ratio": 1.1380208333333333,
+      "greedy_exact_match_rate": 0.16666666666666666,
+      "rollback_events": 9,
+      "request_telemetry": {
+        "request_count": 30,
+        "latency_seconds": {
+          "p50": 0.15479140006937087,
+          "p95": 0.3217416001018135,
+          "mean": 0.18001011671343198
+        },
+        "time_to_first_token_seconds": {
+          "p50": 0.022942049894481897,
+          "p95": 0.02985696003306656
+        },
+        "prefill_seconds": {
+          "p50": 0.008550000027753413,
+          "p95": 0.010483395087067037
+        },
+        "cache_peak_tokens": {
+          "target_max": 82,
+          "draft_max": 82
+        },
+        "decoder_health": {
+          "acceptance_rate": 0.9744771533353157,
+          "naive_acceptance_rate_audit_only": 0.9072222222222223,
+          "censored_fraction": 0.07666666666666666,
+          "rollback_rate_per_round": 0.1836734693877551,
+          "rollback_rate_per_proposed_token": 0.0234375,
+          "mean_target_decode_calls": 17.0
+        }
+      }
+    },
+    {
+      "draft_k": 12,
+      "median_total_seconds": 0.8455534998793155,
+      "tokens_per_second": 454.14039449284724,
+      "wall_clock_speedup": 1.9181319691947711,
+      "speedup_ci95": [
+        1.753666188922126,
+        2.1081994399514876
+      ],
+      "mean_acceptance_rate": 0.9915254237288136,
+      "mean_naive_acceptance_rate": 0.9317632850241546,
+      "mean_censored_fraction": 0.06143529112636664,
+      "mean_target_decode_calls": 11.0,
+      "target_call_reduction": 0.828125,
+      "target_token_ratio": 1.078125,
+      "greedy_exact_match_rate": 0.16666666666666666,
+      "rollback_events": 3,
+      "request_telemetry": {
+        "request_count": 30,
+        "latency_seconds": {
+          "p50": 0.13648960005957633,
+          "p95": 0.1804124401300214,
+          "mean": 0.14169870336384824
+        },
+        "time_to_first_token_seconds": {
+          "p50": 0.02800744993146509,
+          "p95": 0.0387305850163102
+        },
+        "prefill_seconds": {
+          "p50": 0.00877485005185008,
+          "p95": 0.011632620007731017
+        },
+        "cache_peak_tokens": {
+          "target_max": 82,
+          "draft_max": 82
+        },
+        "decoder_health": {
+          "acceptance_rate": 0.9915254237288136,
+          "naive_acceptance_rate_audit_only": 0.9317632850241545,
+          "censored_fraction": 0.061435291126366635,
+          "rollback_rate_per_round": 0.09090909090909091,
+          "rollback_rate_per_proposed_token": 0.007874015748031496,
+          "mean_target_decode_calls": 11.0
+        }
+      }
+    },
+    {
+      "draft_k": 16,
+      "median_total_seconds": 0.802134299883619,
+      "tokens_per_second": 478.7228274064758,
+      "wall_clock_speedup": 2.021959664383333,
+      "speedup_ci95": [
+        1.7868865161963303,
+        2.308110307388069
+      ],
+      "mean_acceptance_rate": 0.986247723132969,
+      "mean_naive_acceptance_rate": 0.9066666666666666,
+      "mean_censored_fraction": 0.08314176245210729,
+      "mean_target_decode_calls": 9.333333333333334,
+      "target_call_reduction": 0.8541666666666666,
+      "target_token_ratio": 1.1197916666666667,
+      "greedy_exact_match_rate": 0.16666666666666666,
+      "rollback_events": 5,
+      "request_telemetry": {
+        "request_count": 30,
+        "latency_seconds": {
+          "p50": 0.13505010004155338,
+          "p95": 0.17489969007438047,
+          "mean": 0.13533430333870153
+        },
+        "time_to_first_token_seconds": {
+          "p50": 0.03205544990487397,
+          "p95": 0.04119117999216541
+        },
+        "prefill_seconds": {
+          "p50": 0.008675249991938472,
+          "p95": 0.01353401000378653
+        },
+        "cache_peak_tokens": {
+          "target_max": 82,
+          "draft_max": 82
+        },
+        "decoder_health": {
+          "acceptance_rate": 0.986247723132969,
+          "naive_acceptance_rate_audit_only": 0.9066666666666666,
+          "censored_fraction": 0.08314176245210729,
+          "rollback_rate_per_round": 0.17857142857142858,
+          "rollback_rate_per_proposed_token": 0.012437810945273632,
+          "mean_target_decode_calls": 9.333333333333334
+        }
+      }
+    },
+    {
+      "draft_k": 20,
+      "median_total_seconds": 0.7593136001378298,
+      "tokens_per_second": 505.7199027256943,
+      "wall_clock_speedup": 2.135985974027911,
+      "speedup_ci95": [
+        2.0185034120982097,
+        2.289339959174409
+      ],
+      "mean_acceptance_rate": 0.9890710382513661,
+      "mean_naive_acceptance_rate": 0.8936636517972135,
+      "mean_censored_fraction": 0.09699750956172189,
+      "mean_target_decode_calls": 7.666666666666667,
+      "target_call_reduction": 0.8802083333333334,
+      "target_token_ratio": 1.1223958333333333,
+      "greedy_exact_match_rate": 0.0,
+      "rollback_events": 4,
+      "request_telemetry": {
+        "request_count": 30,
+        "latency_seconds": {
+          "p50": 0.1245925499824807,
+          "p95": 0.16193763508927073,
+          "mean": 0.1283727966869871
+        },
+        "time_to_first_token_seconds": {
+          "p50": 0.035208749934099615,
+          "p95": 0.042887769942171874
+        },
+        "prefill_seconds": {
+          "p50": 0.008819849928840995,
+          "p95": 0.011788789904676373
+        },
+        "cache_peak_tokens": {
+          "target_max": 82,
+          "draft_max": 82
+        },
+        "decoder_health": {
+          "acceptance_rate": 0.9890710382513661,
+          "naive_acceptance_rate_audit_only": 0.8936636517972134,
+          "censored_fraction": 0.09699750956172189,
+          "rollback_rate_per_round": 0.18181818181818182,
+          "rollback_rate_per_proposed_token": 0.009828009828009828,
+          "mean_target_decode_calls": 7.666666666666667
+        }
+      }
+    },
+    {
+      "draft_k": 24,
+      "median_total_seconds": 0.7326543997041881,
+      "tokens_per_second": 524.121605159324,
+      "wall_clock_speedup": 2.2137084011750745,
+      "speedup_ci95": [
+        1.8876729373081813,
+        2.49795962543319
+      ],
+      "mean_acceptance_rate": 0.9919354838709676,
+      "mean_naive_acceptance_rate": 0.9306930693069306,
+      "mean_censored_fraction": 0.06435643564356436,
+      "mean_target_decode_calls": 6.666666666666667,
+      "target_call_reduction": 0.8958333333333334,
+      "target_token_ratio": 1.109375,
+      "greedy_exact_match_rate": 0.16666666666666666,
+      "rollback_events": 3,
+      "request_telemetry": {
+        "request_count": 30,
+        "latency_seconds": {
+          "p50": 0.11172585003077984,
+          "p95": 0.17501469003036618,
+          "mean": 0.124922896681043
+        },
+        "time_to_first_token_seconds": {
+          "p50": 0.041236049961298704,
+          "p95": 0.06326229490805411
+        },
+        "prefill_seconds": {
+          "p50": 0.008597899926826358,
+          "p95": 0.010650704952422528
+        },
+        "cache_peak_tokens": {
+          "target_max": 82,
+          "draft_max": 82
+        },
+        "decoder_health": {
+          "acceptance_rate": 0.9919354838709677,
+          "naive_acceptance_rate_audit_only": 0.9306930693069307,
+          "censored_fraction": 0.06435643564356436,
+          "rollback_rate_per_round": 0.15,
+          "rollback_rate_per_proposed_token": 0.007389162561576354,
+          "mean_target_decode_calls": 6.666666666666667
+        }
+      }
+    },
+    {
+      "draft_k": 28,
+      "median_total_seconds": 0.9215184000786394,
+      "tokens_per_second": 416.70356225901804,
+      "wall_clock_speedup": 1.760011736764709,
+      "speedup_ci95": [
+        1.3874101493565627,
+        2.2380449163396796
+      ],
+      "mean_acceptance_rate": 0.9654804574159414,
+      "mean_naive_acceptance_rate": 0.7475815226010077,
+      "mean_censored_fraction": 0.23378017883066568,
+      "mean_target_decode_calls": 8.333333333333334,
+      "target_call_reduction": 0.8697916666666666,
+      "target_token_ratio": 1.5026041666666667,
+      "greedy_exact_match_rate": 0.0,
+      "rollback_events": 13,
+      "request_telemetry": {
+        "request_count": 30,
+        "latency_seconds": {
+          "p50": 0.14555279992055148,
+          "p95": 0.23241255001630634,
+          "mean": 0.1549656300107017
+        },
+        "time_to_first_token_seconds": {
+          "p50": 0.04431639995891601,
+          "p95": 0.058034089871216554
+        },
+        "prefill_seconds": {
+          "p50": 0.008373699965886772,
+          "p95": 0.01218776990426704
+        },
+        "cache_peak_tokens": {
+          "target_max": 82,
+          "draft_max": 82
+        },
+        "decoder_health": {
+          "acceptance_rate": 0.9654804574159412,
+          "naive_acceptance_rate_audit_only": 0.7475815226010077,
+          "censored_fraction": 0.23378017883066565,
+          "rollback_rate_per_round": 0.52,
+          "rollback_rate_per_proposed_token": 0.02355072463768116,
+          "mean_target_decode_calls": 8.333333333333334
+        }
+      }
+    },
+    {
+      "draft_k": 32,
+      "median_total_seconds": 0.5955405000131577,
+      "tokens_per_second": 644.7924196448705,
+      "wall_clock_speedup": 2.723380189503835,
+      "speedup_ci95": [
+        2.6400286273805795,
+        2.7915214774527546
+      ],
+      "mean_acceptance_rate": 0.9973118279569894,
+      "mean_naive_acceptance_rate": 0.9921875,
+      "mean_censored_fraction": 0.005208333333333333,
+      "mean_target_decode_calls": 4.166666666666667,
+      "target_call_reduction": 0.9348958333333334,
+      "target_token_ratio": 1.0078125,
+      "greedy_exact_match_rate": 0.16666666666666666,
+      "rollback_events": 1,
+      "request_telemetry": {
+        "request_count": 30,
+        "latency_seconds": {
+          "p50": 0.0979910499881953,
+          "p95": 0.11650863501708952,
+          "mean": 0.10093888002447785
+        },
+        "time_to_first_token_seconds": {
+          "p50": 0.046941200038418174,
+          "p95": 0.05825053493026644
+        },
+        "prefill_seconds": {
+          "p50": 0.008154399925842881,
+          "p95": 0.01086493986658752
+        },
+        "cache_peak_tokens": {
+          "target_max": 82,
+          "draft_max": 82
+        },
+        "decoder_health": {
+          "acceptance_rate": 0.9973118279569892,
+          "naive_acceptance_rate_audit_only": 0.9921875,
+          "censored_fraction": 0.005208333333333333,
+          "rollback_rate_per_round": 0.08333333333333333,
+          "rollback_rate_per_proposed_token": 0.00267379679144385,
+          "mean_target_decode_calls": 4.166666666666667
+        }
+      }
+    }
+  ]
+}

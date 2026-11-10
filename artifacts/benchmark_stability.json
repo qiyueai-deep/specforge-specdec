@@ -1,0 +1,74 @@
+{
+  "environment": {
+    "torch_version": "2.13.0+cpu",
+    "torch_threads": 1,
+    "device": "cpu",
+    "prompt_count": 6,
+    "prompt_tokens": 18,
+    "new_tokens": 32,
+    "repeats": 9,
+    "warmups": 2
+  },
+  "baseline": {
+    "median_total_seconds": 0.6862163997720927,
+    "tokens_per_second": 279.7951201162889,
+    "mean_target_decode_calls": 32
+  },
+  "speculative": [
+    {
+      "draft_k": 1,
+      "median_total_seconds": 0.8514996997546405,
+      "tokens_per_second": 225.4845187324491,
+      "wall_clock_speedup": 0.8058915346298136,
+      "mean_acceptance_rate": 0.9791666666666666,
+      "mean_target_decode_calls": 32.333333333333336,
+      "target_call_reduction": -0.01041666666666674,
+      "greedy_exact_match_rate": 1.0,
+      "rollback_events": 2
+    },
+    {
+      "draft_k": 2,
+      "median_total_seconds": 0.7165836002677679,
+      "tokens_per_second": 267.93803253138196,
+      "wall_clock_speedup": 0.9576222502380353,
+      "mean_acceptance_rate": 0.9924242424242425,
+      "mean_target_decode_calls": 22.0,
+      "target_call_reduction": 0.3125,
+      "greedy_exact_match_rate": 1.0,
+      "rollback_events": 1
+    },
+    {
+      "draft_k": 4,
+      "median_total_seconds": 0.5616929999087006,
+      "tokens_per_second": 341.82373650946033,
+      "wall_clock_speedup": 1.221692988667533,
+      "mean_acceptance_rate": 0.9474548440065682,
+      "mean_target_decode_calls": 14.5,
+      "target_call_reduction": 0.546875,
+      "greedy_exact_match_rate": 1.0,
+      "rollback_events": 3
+    },
+    {
+      "draft_k": 6,
+      "median_total_seconds": 0.45497179962694645,
+      "tokens_per_second": 422.00417730819834,
+      "wall_clock_speedup": 1.508261391881332,
+      "mean_acceptance_rate": 0.96875,
+      "mean_target_decode_calls": 10.333333333333334,
+      "target_call_reduction": 0.6770833333333333,
+      "greedy_exact_match_rate": 1.0,
+      "rollback_events": 2
+    },
+    {
+      "draft_k": 8,
+      "median_total_seconds": 0.4392018001526594,
+      "tokens_per_second": 437.1566781676758,
+      "wall_clock_speedup": 1.5624170928570307,
+      "mean_acceptance_rate": 0.9353832442067737,
+      "mean_target_decode_calls": 8.666666666666666,
+      "target_call_reduction": 0.7291666666666667,
+      "greedy_exact_match_rate": 1.0,
+      "rollback_events": 3
+    }
+  ]
+}

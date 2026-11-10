@@ -1,0 +1,421 @@
+{
+  "environment": {
+    "torch_version": "2.11.0+cpu",
+    "torch_threads": 1,
+    "device": "cpu",
+    "prompt_count": 6,
+    "prompt_tokens": 18,
+    "prompt_split": "calibration",
+    "new_tokens": 64,
+    "repeats": 5,
+    "warmups": 2,
+    "mode": "sample",
+    "temperature": 1.0,
+    "top_k": null,
+    "use_compile": false,
+    "acceptance_definition": "accepted / verified (risk set)"
+  },
+  "baseline": {
+    "median_total_seconds": 1.5599470001179725,
+    "tokens_per_second": 246.16220933849652,
+    "mean_target_decode_calls": 64,
+    "request_telemetry": {
+      "request_count": 30,
+      "latency_seconds": {
+        "p50": 0.2574313000077382,
+        "p95": 0.28877649491187185,
+        "mean": 0.2620150999786953
+      },
+      "time_to_first_token_seconds": {
+        "p50": 0.007544700056314468,
+        "p95": 0.010554600076284257
+      },
+      "prefill_seconds": {
+        "p50": 0.007387000136077404,
+        "p95": 0.010377800022251905
+      },
+      "cache_peak_tokens": {
+        "target_max": 82,
+        "draft_max": 0
+      },
+      "decoder_health": {
+        "acceptance_rate": 0.0,
+        "naive_acceptance_rate_audit_only": 0.0,
+        "censored_fraction": 0.0,
+        "rollback_rate_per_round": 0.0,
+        "rollback_rate_per_proposed_token": 0.0,
+        "mean_target_decode_calls": 64.0
+      }
+    }
+  },
+  "speculative": [
+    {
+      "draft_k": 4,
+      "median_total_seconds": 1.3333948000799865,
+      "tokens_per_second": 287.98672379475676,
+      "wall_clock_speedup": 1.1699063173370676,
+      "speedup_ci95": [
+        1.0950517042320316,
+        1.2536677206541962
+      ],
+      "mean_acceptance_rate": 0.967885872297637,
+      "mean_naive_acceptance_rate": 0.9107760787194557,
+      "mean_censored_fraction": 0.06212947211052686,
+      "mean_target_decode_calls": 28.5,
+      "target_call_reduction": 0.5546875,
+      "target_token_ratio": 1.0859375,
+      "greedy_exact_match_rate": 0.0,
+      "rollback_events": 10,
+      "request_telemetry": {
+        "request_count": 30,
+        "latency_seconds": {
+          "p50": 0.2131025498965755,
+          "p95": 0.2645111099118367,
+          "mean": 0.22391844334391256
+        },
+        "time_to_first_token_seconds": {
+          "p50": 0.019116300041787326,
+          "p95": 0.025020025053527198
+        },
+        "prefill_seconds": {
+          "p50": 0.008518249960616231,
+          "p95": 0.012134859932120889
+        },
+        "cache_peak_tokens": {
+          "target_max": 82,
+          "draft_max": 82
+        },
+        "decoder_health": {
+          "acceptance_rate": 0.967885872297637,
+          "naive_acceptance_rate_audit_only": 0.9107760787194557,
+          "censored_fraction": 0.06212947211052686,
+          "rollback_rate_per_round": 0.11764705882352941,
+          "rollback_rate_per_proposed_token": 0.030211480362537766,
+          "mean_target_decode_calls": 28.5
+        }
+      }
+    },
+    {
+      "draft_k": 8,
+      "median_total_seconds": 1.0309997997246683,
+      "tokens_per_second": 372.4540005755078,
+      "wall_clock_speedup": 1.513042971040888,
+      "speedup_ci95": [
+        1.2920361383784258,
+        1.6995663699228978
+      ],
+      "mean_acceptance_rate": 0.9715531767271286,
+      "mean_naive_acceptance_rate": 0.9000286861732644,
+      "mean_censored_fraction": 0.0791451520367183,
+      "mean_target_decode_calls": 17.166666666666668,
+      "target_call_reduction": 0.7317708333333333,
+      "target_token_ratio": 1.1223958333333333,
+      "greedy_exact_match_rate": 0.16666666666666666,
+      "rollback_events": 10,
+      "request_telemetry": {
+        "request_count": 30,
+        "latency_seconds": {
+          "p50": 0.16102300002239645,
+          "p95": 0.2406969800009392,
+          "mean": 0.17448132329930863
+        },
+        "time_to_first_token_seconds": {
+          "p50": 0.022711549885571003,
+          "p95": 0.027785624936223025
+        },
+        "prefill_seconds": {
+          "p50": 0.00845730013679713,
+          "p95": 0.009619144815951585
+        },
+        "cache_peak_tokens": {
+          "target_max": 82,
+          "draft_max": 82
+        },
+        "decoder_health": {
+          "acceptance_rate": 0.9715531767271286,
+          "naive_acceptance_rate_audit_only": 0.9000286861732645,
+          "censored_fraction": 0.0791451520367183,
+          "rollback_rate_per_round": 0.20408163265306123,
+          "rollback_rate_per_proposed_token": 0.026525198938992044,
+          "mean_target_decode_calls": 17.166666666666668
+        }
+      }
+    },
+    {
+      "draft_k": 12,
+      "median_total_seconds": 0.8455260000191629,
+      "tokens_per_second": 454.15516494028225,
+      "wall_clock_speedup": 1.8449426748350943,
+      "speedup_ci95": [
+        1.7522044424367003,
+        1.9743296564791748
+      ],
+      "mean_acceptance_rate": 0.9861535611744002,
+      "mean_naive_acceptance_rate": 0.9225857044520561,
+      "mean_censored_fraction": 0.06543349944560545,
+      "mean_target_decode_calls": 11.0,
+      "target_call_reduction": 0.828125,
+      "target_token_ratio": 1.0833333333333333,
+      "greedy_exact_match_rate": 0.16666666666666666,
+      "rollback_events": 5,
+      "request_telemetry": {
+        "request_count": 30,
+        "latency_seconds": {
+          "p50": 0.1378277001203969,
+          "p95": 0.1646998800220899,
+          "mean": 0.14084842666052283
+        },
+        "time_to_first_token_seconds": {
+          "p50": 0.026824550004675984,
+          "p95": 0.03628536004107445
+        },
+        "prefill_seconds": {
+          "p50": 0.00809484999626875,
+          "p95": 0.009810665040276941
+        },
+        "cache_peak_tokens": {
+          "target_max": 82,
+          "draft_max": 82
+        },
+        "decoder_health": {
+          "acceptance_rate": 0.9861535611744003,
+          "naive_acceptance_rate_audit_only": 0.9225857044520561,
+          "censored_fraction": 0.06543349944560545,
+          "rollback_rate_per_round": 0.15151515151515152,
+          "rollback_rate_per_proposed_token": 0.013054830287206266,
+          "mean_target_decode_calls": 11.0
+        }
+      }
+    },
+    {
+      "draft_k": 16,
+      "median_total_seconds": 0.7007528999820352,
+      "tokens_per_second": 547.9820347655278,
+      "wall_clock_speedup": 2.2261013834662178,
+      "speedup_ci95": [
+        2.184554084831064,
+        2.2716348893534084
+      ],
+      "mean_acceptance_rate": 1.0,
+      "mean_naive_acceptance_rate": 1.0,
+      "mean_censored_fraction": 0.0,
+      "mean_target_decode_calls": 8.0,
+      "target_call_reduction": 0.875,
+      "target_token_ratio": 1.0,
+      "greedy_exact_match_rate": 0.16666666666666666,
+      "rollback_events": 0,
+      "request_telemetry": {
+        "request_count": 30,
+        "latency_seconds": {
+          "p50": 0.11724485002923757,
+          "p95": 0.13279481505742297,
+          "mean": 0.11798903335196277
+        },
+        "time_to_first_token_seconds": {
+          "p50": 0.0306254499591887,
+          "p95": 0.038048174954019486
+        },
+        "prefill_seconds": {
+          "p50": 0.008255499880760908,
+          "p95": 0.010227780020795756
+        },
+        "cache_peak_tokens": {
+          "target_max": 82,
+          "draft_max": 82
+        },
+        "decoder_health": {
+          "acceptance_rate": 1.0,
+          "naive_acceptance_rate_audit_only": 1.0,
+          "censored_fraction": 0.0,
+          "rollback_rate_per_round": 0.0,
+          "rollback_rate_per_proposed_token": 0.0,
+          "mean_target_decode_calls": 8.0
+        }
+      }
+    },
+    {
+      "draft_k": 20,
+      "median_total_seconds": 0.7233206999953836,
+      "tokens_per_second": 530.884848176543,
+      "wall_clock_speedup": 2.156646422711155,
+      "speedup_ci95": [
+        1.9703311987769287,
+        2.3580392869819504
+      ],
+      "mean_acceptance_rate": 0.9945355191256832,
+      "mean_naive_acceptance_rate": 0.9352319154049508,
+      "mean_censored_fraction": 0.06029199711607786,
+      "mean_target_decode_calls": 7.333333333333333,
+      "target_call_reduction": 0.8854166666666666,
+      "target_token_ratio": 1.0755208333333333,
+      "greedy_exact_match_rate": 0.16666666666666666,
+      "rollback_events": 2,
+      "request_telemetry": {
+        "request_count": 30,
+        "latency_seconds": {
+          "p50": 0.11443449999205768,
+          "p95": 0.1544434498879127,
+          "mean": 0.12129215665627271
+        },
+        "time_to_first_token_seconds": {
+          "p50": 0.035354800056666136,
+          "p95": 0.050987604993861166
+        },
+        "prefill_seconds": {
+          "p50": 0.008247949997894466,
+          "p95": 0.0123936450923793
+        },
+        "cache_peak_tokens": {
+          "target_max": 82,
+          "draft_max": 82
+        },
+        "decoder_health": {
+          "acceptance_rate": 0.994535519125683,
+          "naive_acceptance_rate_audit_only": 0.9352319154049507,
+          "censored_fraction": 0.06029199711607787,
+          "rollback_rate_per_round": 0.1,
+          "rollback_rate_per_proposed_token": 0.005141388174807198,
+          "mean_target_decode_calls": 7.333333333333333
+        }
+      }
+    },
+    {
+      "draft_k": 24,
+      "median_total_seconds": 0.7207249999046326,
+      "tokens_per_second": 532.7968365892837,
+      "wall_clock_speedup": 2.1644136117442674,
+      "speedup_ci95": [
+        2.006526975277152,
+        2.3560019041305207
+      ],
+      "mean_acceptance_rate": 0.9891591750396614,
+      "mean_naive_acceptance_rate": 0.9137617656604998,
+      "mean_censored_fraction": 0.07723250027047496,
+      "mean_target_decode_calls": 7.0,
+      "target_call_reduction": 0.890625,
+      "target_token_ratio": 1.1015625,
+      "greedy_exact_match_rate": 0.16666666666666666,
+      "rollback_events": 4,
+      "request_telemetry": {
+        "request_count": 30,
+        "latency_seconds": {
+          "p50": 0.1163821000372991,
+          "p95": 0.1523479700554162,
+          "mean": 0.120390099977764
+        },
+        "time_to_first_token_seconds": {
+          "p50": 0.03856145008467138,
+          "p95": 0.0542434748611413
+        },
+        "prefill_seconds": {
+          "p50": 0.008448950131423771,
+          "p95": 0.010959370096679777
+        },
+        "cache_peak_tokens": {
+          "target_max": 82,
+          "draft_max": 82
+        },
+        "decoder_health": {
+          "acceptance_rate": 0.9891591750396616,
+          "naive_acceptance_rate_audit_only": 0.9137617656604998,
+          "censored_fraction": 0.07723250027047496,
+          "rollback_rate_per_round": 0.19047619047619047,
+          "rollback_rate_per_proposed_token": 0.009950248756218905,
+          "mean_target_decode_calls": 7.0
+        }
+      }
+    },
+    {
+      "draft_k": 28,
+      "median_total_seconds": 0.6690621003508568,
+      "tokens_per_second": 573.937755252659,
+      "wall_clock_speedup": 2.331542915522991,
+      "speedup_ci95": [
+        2.2252831527346046,
+        2.425941895678646
+      ],
+      "mean_acceptance_rate": 0.9973118279569894,
+      "mean_naive_acceptance_rate": 0.9543650793650794,
+      "mean_censored_fraction": 0.043650793650793655,
+      "mean_target_decode_calls": 6.0,
+      "target_call_reduction": 0.90625,
+      "target_token_ratio": 1.0598958333333333,
+      "greedy_exact_match_rate": 0.3333333333333333,
+      "rollback_events": 1,
+      "request_telemetry": {
+        "request_count": 30,
+        "latency_seconds": {
+          "p50": 0.10833670012652874,
+          "p95": 0.12411606502719223,
+          "mean": 0.11128404001550128
+        },
+        "time_to_first_token_seconds": {
+          "p50": 0.0426751000341028,
+          "p95": 0.05141649994766338
+        },
+        "prefill_seconds": {
+          "p50": 0.008468599990010262,
+          "p95": 0.01181186005705967
+        },
+        "cache_peak_tokens": {
+          "target_max": 82,
+          "draft_max": 82
+        },
+        "decoder_health": {
+          "acceptance_rate": 0.9973118279569892,
+          "naive_acceptance_rate_audit_only": 0.9543650793650793,
+          "censored_fraction": 0.04365079365079365,
+          "rollback_rate_per_round": 0.05555555555555555,
+          "rollback_rate_per_proposed_token": 0.002570694087403599,
+          "mean_target_decode_calls": 6.0
+        }
+      }
+    },
+    {
+      "draft_k": 32,
+      "median_total_seconds": 0.5873022002633661,
+      "tokens_per_second": 653.8371554334403,
+      "wall_clock_speedup": 2.656123201000166,
+      "speedup_ci95": [
+        2.479694401443465,
+        2.809887336618875
+      ],
+      "mean_acceptance_rate": 0.9973118279569894,
+      "mean_naive_acceptance_rate": 0.9745370370370371,
+      "mean_censored_fraction": 0.02314814814814815,
+      "mean_target_decode_calls": 4.333333333333333,
+      "target_call_reduction": 0.9322916666666666,
+      "target_token_ratio": 1.0286458333333333,
+      "greedy_exact_match_rate": 0.16666666666666666,
+      "rollback_events": 1,
+      "request_telemetry": {
+        "request_count": 30,
+        "latency_seconds": {
+          "p50": 0.09422915009781718,
+          "p95": 0.13461393000325184,
+          "mean": 0.1011601266839231
+        },
+        "time_to_first_token_seconds": {
+          "p50": 0.046907550073228776,
+          "p95": 0.05897672998253255
+        },
+        "prefill_seconds": {
+          "p50": 0.008280500071123242,
+          "p95": 0.010923975089099258
+        },
+        "cache_peak_tokens": {
+          "target_max": 82,
+          "draft_max": 82
+        },
+        "decoder_health": {
+          "acceptance_rate": 0.9973118279569892,
+          "naive_acceptance_rate_audit_only": 0.974537037037037,
+          "censored_fraction": 0.023148148148148147,
+          "rollback_rate_per_round": 0.07692307692307693,
+          "rollback_rate_per_proposed_token": 0.002617801047120419,
+          "mean_target_decode_calls": 4.333333333333333
+        }
+      }
+    }
+  ]
+}

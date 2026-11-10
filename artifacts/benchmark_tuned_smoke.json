@@ -1,0 +1,41 @@
+{
+  "environment": {
+    "torch_version": "2.13.0+cpu",
+    "torch_threads": 1,
+    "device": "cpu",
+    "prompt_count": 6,
+    "prompt_tokens": 18,
+    "new_tokens": 12,
+    "repeats": 1,
+    "warmups": 2
+  },
+  "baseline": {
+    "median_total_seconds": 0.17699279985390604,
+    "tokens_per_second": 406.79620899511434,
+    "mean_target_decode_calls": 12
+  },
+  "speculative": [
+    {
+      "draft_k": 1,
+      "median_total_seconds": 0.22074890043586493,
+      "tokens_per_second": 326.1624400295414,
+      "wall_clock_speedup": 0.8017833815001424,
+      "mean_acceptance_rate": 1.0,
+      "mean_target_decode_calls": 12.0,
+      "target_call_reduction": 0.0,
+      "greedy_exact_match_rate": 1.0,
+      "rollback_events": 0
+    },
+    {
+      "draft_k": 4,
+      "median_total_seconds": 0.15633349982090294,
+      "tokens_per_second": 460.5538805341392,
+      "wall_clock_speedup": 1.1321488999905367,
+      "mean_acceptance_rate": 1.0,
+      "mean_target_decode_calls": 6.0,
+      "target_call_reduction": 0.5,
+      "greedy_exact_match_rate": 1.0,
+      "rollback_events": 0
+    }
+  ]
+}

@@ -1,0 +1,252 @@
+{
+  "selection_rule": "argmin_K C(K)/(E[A(K)]+1) on calibration prompts only",
+  "policy_type": "bellman_dp",
+  "bellman_equation": "V(n)=min_K [C(K)+E[V(n-A-1)]], A~truncated geometric(h,K)",
+  "selected_k": 32,
+  "calibration_hazard": 0.9918478260869565,
+  "cost_model": {
+    "round_seconds_by_k": {
+      "1": 0.006568939061253332,
+      "2": 0.008334775543237484,
+      "4": 0.010446350000655422,
+      "8": 0.012805199102980884,
+      "12": 0.015461249994890142,
+      "16": 0.02013402499142103,
+      "20": 0.023506500013172626,
+      "24": 0.023939149997507535,
+      "28": 0.02718267917710667,
+      "32": 0.029577616640987493
+    },
+    "intercept": 0.007030954131960679,
+    "slope": 0.0007322921306367743,
+    "r_squared": 0.9859818708539974,
+    "micro": {
+      "target_single_token_seconds": 0.0025945500237867236,
+      "draft_single_token_seconds": 0.0004794499836862087,
+      "target_block_seconds_by_k": {
+        "1": 0.002451149863190949,
+        "4": 0.0036047499161213636,
+        "8": 0.004325549933128059,
+        "16": 0.00489980005659163,
+        "28": 0.006395850097760558,
+        "32": 0.007135799969546497
+      },
+      "verify_intercept_seconds": 0.0028256017884668986,
+      "verify_slope_seconds_per_token": 0.00013325043938806363,
+      "verify_linear_r_squared": 0.9645681702114463,
+      "torch_threads": 1
+    },
+    "metadata": {
+      "new_tokens": 64,
+      "repeats": 3,
+      "warmups": 1,
+      "prompt_count": 6,
+      "mode": "greedy",
+      "temperature": 1.0,
+      "top_k": null,
+      "device": "cpu",
+      "torch_threads": 1
+    }
+  },
+  "tau_table": [
+    {
+      "k": 1,
+      "round_seconds": 0.006568939061253332,
+      "expected_tokens": 1.9918478260869565,
+      "seconds_per_token": 0.0032979121071503767
+    },
+    {
+      "k": 2,
+      "round_seconds": 0.008334775543237484,
+      "expected_tokens": 2.975609936200373,
+      "seconds_per_token": 0.0028010309556501735
+    },
+    {
+      "k": 3,
+      "round_seconds": 0.009390562771946453,
+      "expected_tokens": 3.951352246503087,
+      "seconds_per_token": 0.002376544075577423
+    },
+    {
+      "k": 4,
+      "round_seconds": 0.010446350000655422,
+      "expected_tokens": 4.9191401357979,
+      "seconds_per_token": 0.0021236130120861037
+    },
+    {
+      "k": 5,
+      "round_seconds": 0.011036062276236788,
+      "expected_tokens": 5.879038449908241,
+      "seconds_per_token": 0.001877188314087151
+    },
+    {
+      "k": 6,
+      "round_seconds": 0.011625774551818152,
+      "expected_tokens": 6.83111150602312,
+      "seconds_per_token": 0.0017018862218201954
+    },
+    {
+      "k": 7,
+      "round_seconds": 0.012215486827399518,
+      "expected_tokens": 7.775423097006634,
+      "seconds_per_token": 0.0015710382155412496
+    },
+    {
+      "k": 8,
+      "round_seconds": 0.012805199102980884,
+      "expected_tokens": 8.712036495672344,
+      "seconds_per_token": 0.0014698284504824786
+    },
+    {
+      "k": 9,
+      "round_seconds": 0.0134692118259582,
+      "expected_tokens": 9.641014459022832,
+      "seconds_per_token": 0.0013970741236004095
+    },
+    {
+      "k": 10,
+      "round_seconds": 0.014133224548935513,
+      "expected_tokens": 10.562419232454719,
+      "seconds_per_token": 0.001338066993734629
+    },
+    {
+      "k": 11,
+      "round_seconds": 0.014797237271912829,
+      "expected_tokens": 11.476312553929269,
+      "seconds_per_token": 0.0012893721047050552
+    },
+    {
+      "k": 12,
+      "round_seconds": 0.015461249994890142,
+      "expected_tokens": 12.38275565810919,
+      "seconds_per_token": 0.0012486114094292827
+    },
+    {
+      "k": 13,
+      "round_seconds": 0.016629443744022865,
+      "expected_tokens": 13.281809280461562,
+      "seconds_per_token": 0.0012520465693243992
+    },
+    {
+      "k": 14,
+      "round_seconds": 0.017797637493155584,
+      "expected_tokens": 14.173533661327365,
+      "seconds_per_token": 0.0012556951511475663
+    },
+    {
+      "k": 15,
+      "round_seconds": 0.018965831242288306,
+      "expected_tokens": 15.057988549957848,
+      "seconds_per_token": 0.0012595195685908126
+    },
+    {
+      "k": 16,
+      "round_seconds": 0.02013402499142103,
+      "expected_tokens": 15.935233208517984,
+      "seconds_per_token": 0.0012634910784147565
+    },
+    {
+      "k": 17,
+      "round_seconds": 0.02097714374685893,
+      "expected_tokens": 16.805326416057234,
+      "seconds_per_token": 0.0012482437548380844
+    },
+    {
+      "k": 18,
+      "round_seconds": 0.02182026250229683,
+      "expected_tokens": 17.66832647244807,
+      "seconds_per_token": 0.0012349931690657447
+    },
+    {
+      "k": 19,
+      "round_seconds": 0.022663381257734726,
+      "expected_tokens": 18.52429120229224,
+      "seconds_per_token": 0.0012234412107994884
+    },
+    {
+      "k": 20,
+      "round_seconds": 0.023506500013172626,
+      "expected_tokens": 19.373277958795303,
+      "seconds_per_token": 0.0012133465520480428
+    },
+    {
+      "k": 21,
+      "round_seconds": 0.023614662509256354,
+      "expected_tokens": 20.21534362760947,
+      "seconds_per_token": 0.0011681553845567186
+    },
+    {
+      "k": 22,
+      "round_seconds": 0.02372282500534008,
+      "expected_tokens": 21.050544630645255,
+      "seconds_per_token": 0.0011269459019508947
+    },
+    {
+      "k": 23,
+      "round_seconds": 0.023830987501423807,
+      "expected_tokens": 21.878936929851957,
+      "seconds_per_token": 0.001089220540185773
+    },
+    {
+      "k": 24,
+      "round_seconds": 0.023939149997507535,
+      "expected_tokens": 22.700576030967305,
+      "seconds_per_token": 0.0010545613452650105
+    },
+    {
+      "k": 25,
+      "round_seconds": 0.02475003229240732,
+      "expected_tokens": 23.515516987236587,
+      "seconds_per_token": 0.0010524979019530289
+    },
+    {
+      "k": 26,
+      "round_seconds": 0.025560914587307103,
+      "expected_tokens": 24.32381440310151,
+      "seconds_per_token": 0.001050859629320632
+    },
+    {
+      "k": 27,
+      "round_seconds": 0.026371796882206887,
+      "expected_tokens": 25.125522437858823,
+      "seconds_per_token": 0.0010496019315590507
+    },
+    {
+      "k": 28,
+      "round_seconds": 0.02718267917710667,
+      "expected_tokens": 25.920694809289333,
+      "seconds_per_token": 0.001048686363429003
+    },
+    {
+      "k": 29,
+      "round_seconds": 0.027781413543076873,
+      "expected_tokens": 26.709384797257073,
+      "seconds_per_token": 0.00104013678165773
+    },
+    {
+      "k": 30,
+      "round_seconds": 0.028380147909047082,
+      "expected_tokens": 27.491645247279436,
+      "seconds_per_token": 0.0010323190065118265
+    },
+    {
+      "k": 31,
+      "round_seconds": 0.02897888227501729,
+      "expected_tokens": 28.26752857406792,
+      "seconds_per_token": 0.0010251650475592675
+    },
+    {
+      "k": 32,
+      "round_seconds": 0.029577616640987493,
+      "expected_tokens": 29.03708676504019,
+      "seconds_per_token": 0.0010186151551745228
+    }
+  ],
+  "calibration_prompt_count": 6,
+  "held_out_groups": [
+    "easy",
+    "hard",
+    "mixed"
+  ],
+  "note": "fixed K is a member of the adaptive policy space; strict gains require hazard heterogeneity"
+}

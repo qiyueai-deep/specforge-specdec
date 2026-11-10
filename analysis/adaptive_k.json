@@ -1,0 +1,53 @@
+[
+  {
+    "label": "baseline",
+    "seconds": 1.607044500298798,
+    "speedup": 1.0
+  },
+  {
+    "label": "fixed_k12",
+    "seconds": 0.8921993998810649,
+    "speedup": 1.8012167465176798,
+    "acceptance": 0.9833333333333333,
+    "target_calls": 10,
+    "exact": 1
+  },
+  {
+    "label": "fixed_k28",
+    "seconds": 0.7006566000636667,
+    "speedup": 2.2936264357643537,
+    "acceptance": 0.9384615384615385,
+    "target_calls": 6,
+    "exact": 1
+  },
+  {
+    "label": "adaptive_t0.5",
+    "seconds": 0.7730649998411536,
+    "speedup": 2.0787960916986377,
+    "acceptance": 1.0,
+    "target_calls": 10,
+    "proposals_per_round": 11.8,
+    "exact": 1,
+    "exact_all_prompts": true
+  },
+  {
+    "label": "adaptive_t0.7",
+    "seconds": 0.7780177998356521,
+    "speedup": 2.0655626396186166,
+    "acceptance": 1.0,
+    "target_calls": 10,
+    "proposals_per_round": 11.8,
+    "exact": 1,
+    "exact_all_prompts": true
+  },
+  {
+    "label": "adaptive_t0.9",
+    "seconds": 0.7133804999757558,
+    "speedup": 2.2527171689630054,
+    "acceptance": 1.0,
+    "target_calls": 10,
+    "proposals_per_round": 11.8,
+    "exact": 1,
+    "exact_all_prompts": true
+  }
+]

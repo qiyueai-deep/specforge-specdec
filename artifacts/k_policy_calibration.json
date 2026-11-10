@@ -1,0 +1,100 @@
+{
+  "selection_rule": "argmax wall_clock_speedup on calibration prompts only",
+  "selected_k": 32,
+  "calibration_split": "calibration",
+  "calibration_file": "artifacts/benchmark_calibration.json",
+  "calibration_speedup": 2.3509765097912494,
+  "calibration_speedup_ci95": [
+    2.1116293344641712,
+    2.6490341030046354
+  ],
+  "calibration_prompt_count": 6,
+  "candidates": [
+    {
+      "k": 4,
+      "speedup": 1.292645612568694,
+      "acceptance": 0.9903217697335345,
+      "speedup_ci95": [
+        1.2536413163497766,
+        1.3242592500248003
+      ]
+    },
+    {
+      "k": 8,
+      "speedup": 1.6269766231071656,
+      "acceptance": 0.9853801169590644,
+      "speedup_ci95": [
+        1.565474136650748,
+        1.6763936340128385
+      ]
+    },
+    {
+      "k": 12,
+      "speedup": 1.9250459474377624,
+      "acceptance": 0.9858757062146893,
+      "speedup_ci95": [
+        1.8273860308654908,
+        2.023889326833471
+      ]
+    },
+    {
+      "k": 16,
+      "speedup": 2.232072809228093,
+      "acceptance": 0.986247723132969,
+      "speedup_ci95": [
+        2.0467874353456956,
+        2.406150340157014
+      ]
+    },
+    {
+      "k": 20,
+      "speedup": 2.1821634613754766,
+      "acceptance": 0.9863387978142076,
+      "speedup_ci95": [
+        1.9971210660269476,
+        2.372071320613321
+      ]
+    },
+    {
+      "k": 24,
+      "speedup": 2.1190132812035825,
+      "acceptance": 0.9863828662083552,
+      "speedup_ci95": [
+        1.7889742389365533,
+        2.439243666744538
+      ]
+    },
+    {
+      "k": 28,
+      "speedup": 2.3372356416212527,
+      "acceptance": 0.9919354838709676,
+      "speedup_ci95": [
+        1.9265235162530718,
+        2.7295057989561022
+      ]
+    },
+    {
+      "k": 32,
+      "speedup": 2.3509765097912494,
+      "acceptance": 0.9866444785799624,
+      "speedup_ci95": [
+        2.1116293344641712,
+        2.6490341030046354
+      ]
+    }
+  ],
+  "held_out": {
+    "held_out_split": "held_out",
+    "speedup": 2.357969296599492,
+    "speedup_ci95": [
+      2.0198705419522627,
+      2.784468811441914
+    ],
+    "acceptance_rate": 0.9839563065369518,
+    "greedy_exact_match_rate": 1.0,
+    "prompt_count": 6,
+    "oracle_k_diagnostic_only": 32,
+    "oracle_speedup_diagnostic_only": 2.357969296599492,
+    "regret_vs_oracle": 0.0
+  }
+}
