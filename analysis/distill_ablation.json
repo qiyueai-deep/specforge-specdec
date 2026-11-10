@@ -1,0 +1,333 @@
+{
+  "rows": [
+    {
+      "objective": "ce_only",
+      "sum_min_t1": 0.7982965633273125,
+      "kl_t1": 0.3064504452049732,
+      "top1_t1": 0.917236328125,
+      "pinsker_bound": 0.6087479249527374,
+      "greedy_acceptance": 0.923132183908046,
+      "stochastic_acceptance": 0.7480788839451242,
+      "stochastic_ci": [
+        0.7379263997033741,
+        0.7582313681868743
+      ],
+      "stochastic_acceptance_halfwidth": 0.010152484241750082,
+      "greedy_exact_match_all": true,
+      "train_seconds_mean": 16.707945950096473
+    },
+    {
+      "objective": "kl_ce",
+      "sum_min_t1": 0.8433109819889069,
+      "kl_t1": 0.30985674634575844,
+      "top1_t1": 0.8896484375,
+      "pinsker_bound": 0.6065869697918664,
+      "greedy_acceptance": 0.9034972721012766,
+      "stochastic_acceptance": 0.8257905609407278,
+      "stochastic_ci": [
+        0.8138477276338789,
+        0.8377333942475766
+      ],
+      "stochastic_acceptance_halfwidth": 0.011942833306848866,
+      "greedy_exact_match_all": true,
+      "train_seconds_mean": 15.399030999862589
+    },
+    {
+      "objective": "tv_ce",
+      "sum_min_t1": 0.8310331180691719,
+      "kl_t1": 0.37036576122045517,
+      "top1_t1": 0.87890625,
+      "pinsker_bound": 0.5696922492826683,
+      "greedy_acceptance": 0.8910177975528365,
+      "stochastic_acceptance": 0.7950555180359129,
+      "stochastic_ci": [
+        0.7806302637851581,
+        0.8094807722866677
+      ],
+      "stochastic_acceptance_halfwidth": 0.014425254250754804,
+      "greedy_exact_match_all": true,
+      "train_seconds_mean": 15.098695049877279
+    },
+    {
+      "objective": "kl_tv_ce",
+      "sum_min_t1": 0.8238761052489281,
+      "kl_t1": 0.40950682014226913,
+      "top1_t1": 0.861572265625,
+      "pinsker_bound": 0.547659492241781,
+      "greedy_acceptance": 0.8499943720536045,
+      "stochastic_acceptance": 0.790068992001695,
+      "stochastic_ci": [
+        0.7639357884421845,
+        0.8162021955612055
+      ],
+      "stochastic_acceptance_halfwidth": 0.026133203559510543,
+      "greedy_exact_match_all": true,
+      "train_seconds_mean": 15.712045149994083
+    }
+  ],
+  "records": [
+    {
+      "objective": "ce_only",
+      "seed": 20260820,
+      "train_seconds": 17.780212300131097,
+      "alignment_t1": {
+        "temperature": 1.0,
+        "sum_min_p_q": 0.7874877005815506,
+        "tv": 0.2125122807919979,
+        "kl_target_to_draft": 0.32542750984430313,
+        "top1_agreement": 0.9130859375,
+        "pinsker_acceptance_lower_bound": 0.5966220693665163,
+        "tokens": 2048
+      },
+      "alignment_t2": {
+        "temperature": 2.0,
+        "sum_min_p_q": 0.4244111031293869,
+        "tv": 0.5755888968706131,
+        "kl_target_to_draft": 0.904440388083458,
+        "top1_agreement": 0.8935546875,
+        "pinsker_acceptance_lower_bound": 0.32752680793824285,
+        "tokens": 2048
+      },
+      "greedy_acceptance": 0.9152298850574713,
+      "stochastic_acceptance": 0.7379263997033741,
+      "stochastic_acceptance_ci": [
+        0.6491935483870968,
+        0.8265202076381164
+      ],
+      "top1_agreement_t1": 0.9130859375,
+      "greedy_exact_match": true
+    },
+    {
+      "objective": "ce_only",
+      "seed": 20260831,
+      "train_seconds": 15.635679600061849,
+      "alignment_t1": {
+        "temperature": 1.0,
+        "sum_min_p_q": 0.8091054260730743,
+        "tv": 0.19089457392692566,
+        "kl_target_to_draft": 0.2874733805656433,
+        "top1_agreement": 0.92138671875,
+        "pinsker_acceptance_lower_bound": 0.6208737805389587,
+        "tokens": 2048
+      },
+      "alignment_t2": {
+        "temperature": 2.0,
+        "sum_min_p_q": 0.4338449314236641,
+        "tv": 0.5661550462245941,
+        "kl_target_to_draft": 0.8671614825725555,
+        "top1_agreement": 0.912109375,
+        "pinsker_acceptance_lower_bound": 0.3415315183805091,
+        "tokens": 2048
+      },
+      "greedy_acceptance": 0.9310344827586207,
+      "stochastic_acceptance": 0.7582313681868743,
+      "stochastic_acceptance_ci": [
+        0.6979699666295884,
+        0.8158045977011494
+      ],
+      "top1_agreement_t1": 0.92138671875,
+      "greedy_exact_match": true
+    },
+    {
+      "objective": "kl_ce",
+      "seed": 20260820,
+      "train_seconds": 15.781829499872401,
+      "alignment_t1": {
+        "temperature": 1.0,
+        "sum_min_p_q": 0.8327835947275162,
+        "tv": 0.16721640154719353,
+        "kl_target_to_draft": 0.3294207826256752,
+        "top1_agreement": 0.8818359375,
+        "pinsker_acceptance_lower_bound": 0.5941547199820632,
+        "tokens": 2048
+      },
+      "alignment_t2": {
+        "temperature": 2.0,
+        "sum_min_p_q": 0.6257836818695068,
+        "tv": 0.37421631067991257,
+        "kl_target_to_draft": 0.4931289106607437,
+        "top1_agreement": 0.8583984375,
+        "pinsker_acceptance_lower_bound": 0.5034474294393676,
+        "tokens": 2048
+      },
+      "greedy_acceptance": 0.8837597330367075,
+      "stochastic_acceptance": 0.8138477276338789,
+      "stochastic_acceptance_ci": [
+        0.749971198156682,
+        0.878055974892738
+      ],
+      "top1_agreement_t1": 0.8818359375,
+      "greedy_exact_match": true
+    },
+    {
+      "objective": "kl_ce",
+      "seed": 20260831,
+      "train_seconds": 15.016232499852777,
+      "alignment_t1": {
+        "temperature": 1.0,
+        "sum_min_p_q": 0.8538383692502975,
+        "tv": 0.14616162329912186,
+        "kl_target_to_draft": 0.2902927100658417,
+        "top1_agreement": 0.8974609375,
+        "pinsker_acceptance_lower_bound": 0.6190192196016696,
+        "tokens": 2048
+      },
+      "alignment_t2": {
+        "temperature": 2.0,
+        "sum_min_p_q": 0.6451840549707413,
+        "tv": 0.35481593012809753,
+        "kl_target_to_draft": 0.45032043755054474,
+        "top1_agreement": 0.88623046875,
+        "pinsker_acceptance_lower_bound": 0.5254894956112433,
+        "tokens": 2048
+      },
+      "greedy_acceptance": 0.9232348111658457,
+      "stochastic_acceptance": 0.8377333942475766,
+      "stochastic_acceptance_ci": [
+        0.7588848720800889,
+        0.9085591133004927
+      ],
+      "top1_agreement_t1": 0.8974609375,
+      "greedy_exact_match": true
+    },
+    {
+      "objective": "tv_ce",
+      "seed": 20260820,
+      "train_seconds": 14.25104339979589,
+      "alignment_t1": {
+        "temperature": 1.0,
+        "sum_min_p_q": 0.822910264134407,
+        "tv": 0.17708972096443176,
+        "kl_target_to_draft": 0.37769268453121185,
+        "top1_agreement": 0.869140625,
+        "pinsker_acceptance_lower_bound": 0.5654354567321376,
+        "tokens": 2048
+      },
+      "alignment_t2": {
+        "temperature": 2.0,
+        "sum_min_p_q": 0.6533351391553879,
+        "tv": 0.3466648608446121,
+        "kl_target_to_draft": 0.5173004269599915,
+        "top1_agreement": 0.85498046875,
+        "pinsker_acceptance_lower_bound": 0.4914233455220386,
+        "tokens": 2048
+      },
+      "greedy_acceptance": 0.875139043381535,
+      "stochastic_acceptance": 0.7806302637851581,
+      "stochastic_acceptance_ci": [
+        0.696412680756396,
+        0.8609675433020817
+      ],
+      "top1_agreement_t1": 0.869140625,
+      "greedy_exact_match": true
+    },
+    {
+      "objective": "tv_ce",
+      "seed": 20260831,
+      "train_seconds": 15.946346699958667,
+      "alignment_t1": {
+        "temperature": 1.0,
+        "sum_min_p_q": 0.8391559720039368,
+        "tv": 0.16084400564432144,
+        "kl_target_to_draft": 0.3630388379096985,
+        "top1_agreement": 0.888671875,
+        "pinsker_acceptance_lower_bound": 0.573949041833199,
+        "tokens": 2048
+      },
+      "alignment_t2": {
+        "temperature": 2.0,
+        "sum_min_p_q": 0.6730110049247742,
+        "tv": 0.32698898017406464,
+        "kl_target_to_draft": 0.4765143543481827,
+        "top1_agreement": 0.87451171875,
+        "pinsker_acceptance_lower_bound": 0.511884053554802,
+        "tokens": 2048
+      },
+      "greedy_acceptance": 0.906896551724138,
+      "stochastic_acceptance": 0.8094807722866677,
+      "stochastic_acceptance_ci": [
+        0.728557524233275,
+        0.8839782297791197
+      ],
+      "top1_agreement_t1": 0.888671875,
+      "greedy_exact_match": true
+    },
+    {
+      "objective": "kl_tv_ce",
+      "seed": 20260820,
+      "train_seconds": 15.111216600053012,
+      "alignment_t1": {
+        "temperature": 1.0,
+        "sum_min_p_q": 0.8153854161500931,
+        "tv": 0.18461458384990692,
+        "kl_target_to_draft": 0.43102797120809555,
+        "top1_agreement": 0.85107421875,
+        "pinsker_acceptance_lower_bound": 0.5357651611478865,
+        "tokens": 2048
+      },
+      "alignment_t2": {
+        "temperature": 2.0,
+        "sum_min_p_q": 0.6560922414064407,
+        "tv": 0.34390778094530106,
+        "kl_target_to_draft": 0.475471667945385,
+        "top1_agreement": 0.83154296875,
+        "pinsker_acceptance_lower_bound": 0.5124183822448877,
+        "tokens": 2048
+      },
+      "greedy_acceptance": 0.8445494994438265,
+      "stochastic_acceptance": 0.7639357884421845,
+      "stochastic_acceptance_ci": [
+        0.6877549128661475,
+        0.8448275862068966
+      ],
+      "top1_agreement_t1": 0.85107421875,
+      "greedy_exact_match": true
+    },
+    {
+      "objective": "kl_tv_ce",
+      "seed": 20260831,
+      "train_seconds": 16.312873699935153,
+      "alignment_t1": {
+        "temperature": 1.0,
+        "sum_min_p_q": 0.8323667943477631,
+        "tv": 0.16763318330049515,
+        "kl_target_to_draft": 0.3879856690764427,
+        "top1_agreement": 0.8720703125,
+        "pinsker_acceptance_lower_bound": 0.5595538233356755,
+        "tokens": 2048
+      },
+      "alignment_t2": {
+        "temperature": 2.0,
+        "sum_min_p_q": 0.6746094673871994,
+        "tv": 0.32539052516222,
+        "kl_target_to_draft": 0.4341128543019295,
+        "top1_agreement": 0.8515625,
+        "pinsker_acceptance_lower_bound": 0.5341068500707864,
+        "tokens": 2048
+      },
+      "greedy_acceptance": 0.8554392446633825,
+      "stochastic_acceptance": 0.8162021955612055,
+      "stochastic_acceptance_ci": [
+        0.7582035595105673,
+        0.8756978653530377
+      ],
+      "top1_agreement_t1": 0.8720703125,
+      "greedy_exact_match": true
+    }
+  ],
+  "protocol": {
+    "objectives": [
+      "ce_only",
+      "kl_ce",
+      "tv_ce",
+      "kl_tv_ce"
+    ],
+    "seeds": [
+      20260820,
+      20260831
+    ],
+    "sft_steps": 50,
+    "distill_steps": 90,
+    "target": "frozen pretrained checkpoint"
+  }
+}

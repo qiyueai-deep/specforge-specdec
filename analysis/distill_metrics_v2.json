@@ -1,0 +1,71 @@
+{
+  "rows": [
+    {
+      "temperature": 0.7,
+      "sum_min_p_q": 0.9895618359247843,
+      "tv": 0.010438149562105536,
+      "kl": 0.00881469218681256,
+      "top1": 0.9822591145833334,
+      "pinsker_lower_bound": 0.9336121540234489,
+      "stochastic_acceptance": 0.9907407407407407,
+      "overlap_gap": -0.0011789048159563942,
+      "greedy_acceptance": 0.9813492063492063,
+      "top1_gap": 0.0009099082341270659
+    },
+    {
+      "temperature": 0.9,
+      "sum_min_p_q": 0.9882090389728546,
+      "tv": 0.011790932233755788,
+      "kl": 0.00964963436126709,
+      "top1": 0.9822591145833334,
+      "pinsker_lower_bound": 0.9305390960278118,
+      "stochastic_acceptance": 0.9846906430239764,
+      "overlap_gap": 0.0035183959488782612,
+      "greedy_acceptance": 0.9813492063492063,
+      "top1_gap": 0.0009099082341270659
+    },
+    {
+      "temperature": 1.0,
+      "sum_min_p_q": 0.9863729476928711,
+      "tv": 0.01362703430155913,
+      "kl": 0.011027737831075987,
+      "top1": 0.9822591145833334,
+      "pinsker_lower_bound": 0.9257445697909036,
+      "stochastic_acceptance": 0.9845238095238096,
+      "overlap_gap": 0.001849138169061515,
+      "greedy_acceptance": 0.9813492063492063,
+      "top1_gap": 0.0009099082341270659
+    },
+    {
+      "temperature": 1.2,
+      "sum_min_p_q": 0.9796444674332937,
+      "tv": 0.020355514716356993,
+      "kl": 0.015757057815790176,
+      "top1": 0.9822591145833334,
+      "pinsker_lower_bound": 0.9112389223370114,
+      "stochastic_acceptance": 0.9682443721917406,
+      "overlap_gap": 0.011400095241553054,
+      "greedy_acceptance": 0.9813492063492063,
+      "top1_gap": 0.0009099082341270659
+    },
+    {
+      "temperature": 1.5,
+      "sum_min_p_q": 0.9608141183853149,
+      "tv": 0.03918586236735185,
+      "kl": 0.02740015710393588,
+      "top1": 0.9822591145833334,
+      "pinsker_lower_bound": 0.8829526653359081,
+      "stochastic_acceptance": 0.8838149504816172,
+      "overlap_gap": 0.07699916790369776,
+      "greedy_acceptance": 0.9813492063492063,
+      "top1_gap": 0.0009099082341270659
+    }
+  ],
+  "greedy_exact_match": true,
+  "correlations": {
+    "sum_min_vs_stochastic_acceptance": 0.9894674383592015,
+    "kl_vs_stochastic_acceptance": -0.9845645781845419,
+    "top1_vs_greedy_acceptance": NaN
+  },
+  "pinsker_bound_holds": true
+}
