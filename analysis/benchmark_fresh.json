@@ -1,0 +1,341 @@
+{
+  "environment": {
+    "torch_version": "2.14.0+cpu",
+    "torch_threads": 1,
+    "device": "cpu",
+    "prompt_count": 6,
+    "prompt_tokens": 18,
+    "new_tokens": 64,
+    "repeats": 2,
+    "warmups": 1
+  },
+  "baseline": {
+    "median_total_seconds": 1.4960761496331543,
+    "tokens_per_second": 256.6714268482649,
+    "mean_target_decode_calls": 64,
+    "request_telemetry": {
+      "request_count": 12,
+      "latency_seconds": {
+        "p50": 0.25227874994743615,
+        "p95": 0.27343193494016305,
+        "mean": 0.24934602493885905
+      },
+      "time_to_first_token_seconds": {
+        "p50": 0.008705499931238592,
+        "p95": 0.010898389935027807
+      },
+      "prefill_seconds": {
+        "p50": 0.008649500086903572,
+        "p95": 0.010854969953652469
+      },
+      "cache_peak_tokens": {
+        "target_max": 82,
+        "draft_max": 0
+      },
+      "decoder_health": {
+        "acceptance_rate": 0.0,
+        "rollback_rate_per_round": 0.0,
+        "rollback_rate_per_proposed_token": 0.0,
+        "mean_target_decode_calls": 64.0
+      }
+    }
+  },
+  "speculative": [
+    {
+      "draft_k": 4,
+      "median_total_seconds": 1.122891000006348,
+      "tokens_per_second": 341.9744213800175,
+      "wall_clock_speedup": 1.332343165654277,
+      "mean_acceptance_rate": 0.9750152305183751,
+      "mean_target_decode_calls": 26.666666666666668,
+      "target_call_reduction": 0.5833333333333333,
+      "greedy_exact_match_rate": 1.0,
+      "rollback_events": 4,
+      "request_telemetry": {
+        "request_count": 12,
+        "latency_seconds": {
+          "p50": 0.18983335001394153,
+          "p95": 0.21220676009543238,
+          "mean": 0.18714850000105798
+        },
+        "time_to_first_token_seconds": {
+          "p50": 0.017824199981987476,
+          "p95": 0.023265929950866848
+        },
+        "prefill_seconds": {
+          "p50": 0.009027400054037571,
+          "p95": 0.011915094894357024
+        },
+        "cache_peak_tokens": {
+          "target_max": 82,
+          "draft_max": 82
+        },
+        "decoder_health": {
+          "acceptance_rate": 0.9750152305183751,
+          "rollback_rate_per_round": 0.05,
+          "rollback_rate_per_proposed_token": 0.01282051282051282,
+          "mean_target_decode_calls": 26.666666666666668
+        }
+      }
+    },
+    {
+      "draft_k": 8,
+      "median_total_seconds": 0.88721810025163,
+      "tokens_per_second": 432.8135324235283,
+      "wall_clock_speedup": 1.686255216399262,
+      "mean_acceptance_rate": 0.9315748108851557,
+      "mean_target_decode_calls": 16.0,
+      "target_call_reduction": 0.75,
+      "greedy_exact_match_rate": 1.0,
+      "rollback_events": 5,
+      "request_telemetry": {
+        "request_count": 12,
+        "latency_seconds": {
+          "p50": 0.14396805001888424,
+          "p95": 0.17530744011746718,
+          "mean": 0.14786968337527165
+        },
+        "time_to_first_token_seconds": {
+          "p50": 0.022817049990408123,
+          "p95": 0.02825862005120143
+        },
+        "prefill_seconds": {
+          "p50": 0.009565150015987456,
+          "p95": 0.012060630018822847
+        },
+        "cache_peak_tokens": {
+          "target_max": 82,
+          "draft_max": 82
+        },
+        "decoder_health": {
+          "acceptance_rate": 0.9315748108851557,
+          "rollback_rate_per_round": 0.10638297872340426,
+          "rollback_rate_per_proposed_token": 0.013850415512465374,
+          "mean_target_decode_calls": 16.0
+        }
+      }
+    },
+    {
+      "draft_k": 12,
+      "median_total_seconds": 0.7197770499624312,
+      "tokens_per_second": 533.4985326637504,
+      "wall_clock_speedup": 2.0785271629753157,
+      "mean_acceptance_rate": 0.9289684731482577,
+      "mean_target_decode_calls": 11.0,
+      "target_call_reduction": 0.828125,
+      "greedy_exact_match_rate": 1.0,
+      "rollback_events": 5,
+      "request_telemetry": {
+        "request_count": 12,
+        "latency_seconds": {
+          "p50": 0.11471554997842759,
+          "p95": 0.144308335124515,
+          "mean": 0.1199628416604052
+        },
+        "time_to_first_token_seconds": {
+          "p50": 0.023985649924725294,
+          "p95": 0.03043848999077454
+        },
+        "prefill_seconds": {
+          "p50": 0.009116249973885715,
+          "p95": 0.011624550144188107
+        },
+        "cache_peak_tokens": {
+          "target_max": 82,
+          "draft_max": 82
+        },
+        "decoder_health": {
+          "acceptance_rate": 0.9289684731482577,
+          "rollback_rate_per_round": 0.15151515151515152,
+          "rollback_rate_per_proposed_token": 0.013157894736842105,
+          "mean_target_decode_calls": 11.0
+        }
+      }
+    },
+    {
+      "draft_k": 16,
+      "median_total_seconds": 0.7176462501520291,
+      "tokens_per_second": 535.0825701641329,
+      "wall_clock_speedup": 2.0846986231952296,
+      "mean_acceptance_rate": 0.9043028732577368,
+      "mean_target_decode_calls": 9.166666666666666,
+      "target_call_reduction": 0.8567708333333334,
+      "greedy_exact_match_rate": 1.0,
+      "rollback_events": 5,
+      "request_telemetry": {
+        "request_count": 12,
+        "latency_seconds": {
+          "p50": 0.11729810002725571,
+          "p95": 0.15696485989028586,
+          "mean": 0.11960770835867152
+        },
+        "time_to_first_token_seconds": {
+          "p50": 0.028299549943767488,
+          "p95": 0.03882499006576836
+        },
+        "prefill_seconds": {
+          "p50": 0.00926064990926534,
+          "p95": 0.012878070073202252
+        },
+        "cache_peak_tokens": {
+          "target_max": 82,
+          "draft_max": 82
+        },
+        "decoder_health": {
+          "acceptance_rate": 0.9043028732577368,
+          "rollback_rate_per_round": 0.18518518518518517,
+          "rollback_rate_per_proposed_token": 0.012531328320802004,
+          "mean_target_decode_calls": 9.166666666666666
+        }
+      }
+    },
+    {
+      "draft_k": 20,
+      "median_total_seconds": 0.7014686998445541,
+      "tokens_per_second": 547.4228573350381,
+      "wall_clock_speedup": 2.132776772455686,
+      "mean_acceptance_rate": 0.8633476593101683,
+      "mean_target_decode_calls": 7.666666666666667,
+      "target_call_reduction": 0.8802083333333334,
+      "greedy_exact_match_rate": 1.0,
+      "rollback_events": 5,
+      "request_telemetry": {
+        "request_count": 12,
+        "latency_seconds": {
+          "p50": 0.11710154998581856,
+          "p95": 0.14100071487482635,
+          "mean": 0.11691144997409235
+        },
+        "time_to_first_token_seconds": {
+          "p50": 0.031133049982599914,
+          "p95": 0.040496199915651225
+        },
+        "prefill_seconds": {
+          "p50": 0.008209400111809373,
+          "p95": 0.012542559986468402
+        },
+        "cache_peak_tokens": {
+          "target_max": 82,
+          "draft_max": 82
+        },
+        "decoder_health": {
+          "acceptance_rate": 0.8633476593101683,
+          "rollback_rate_per_round": 0.22727272727272727,
+          "rollback_rate_per_proposed_token": 0.011848341232227487,
+          "mean_target_decode_calls": 7.666666666666667
+        }
+      }
+    },
+    {
+      "draft_k": 24,
+      "median_total_seconds": 0.663875850266777,
+      "tokens_per_second": 578.4214019017118,
+      "wall_clock_speedup": 2.2535480828711565,
+      "mean_acceptance_rate": 0.9013585758377425,
+      "mean_target_decode_calls": 6.666666666666667,
+      "target_call_reduction": 0.8958333333333334,
+      "greedy_exact_match_rate": 1.0,
+      "rollback_events": 4,
+      "request_telemetry": {
+        "request_count": 12,
+        "latency_seconds": {
+          "p50": 0.10129530006088316,
+          "p95": 0.14054475001757966,
+          "mean": 0.11064597504446283
+        },
+        "time_to_first_token_seconds": {
+          "p50": 0.03743290004786104,
+          "p95": 0.04496879492653534
+        },
+        "prefill_seconds": {
+          "p50": 0.009363849996589124,
+          "p95": 0.012725009955465792
+        },
+        "cache_peak_tokens": {
+          "target_max": 82,
+          "draft_max": 82
+        },
+        "decoder_health": {
+          "acceptance_rate": 0.9013585758377425,
+          "rollback_rate_per_round": 0.2,
+          "rollback_rate_per_proposed_token": 0.009708737864077669,
+          "mean_target_decode_calls": 6.666666666666667
+        }
+      }
+    },
+    {
+      "draft_k": 28,
+      "median_total_seconds": 0.6044846499571577,
+      "tokens_per_second": 635.251862933518,
+      "wall_clock_speedup": 2.474961357148089,
+      "mean_acceptance_rate": 0.9063096122878731,
+      "mean_target_decode_calls": 6.333333333333333,
+      "target_call_reduction": 0.9010416666666666,
+      "greedy_exact_match_rate": 1.0,
+      "rollback_events": 4,
+      "request_telemetry": {
+        "request_count": 12,
+        "latency_seconds": {
+          "p50": 0.09501859999727458,
+          "p95": 0.13410523490747436,
+          "mean": 0.10074744165952627
+        },
+        "time_to_first_token_seconds": {
+          "p50": 0.03615580010227859,
+          "p95": 0.049746789957862345
+        },
+        "prefill_seconds": {
+          "p50": 0.008105050073936582,
+          "p95": 0.011505184997804462
+        },
+        "cache_peak_tokens": {
+          "target_max": 82,
+          "draft_max": 82
+        },
+        "decoder_health": {
+          "acceptance_rate": 0.9063096122878731,
+          "rollback_rate_per_round": 0.21052631578947367,
+          "rollback_rate_per_proposed_token": 0.009708737864077669,
+          "mean_target_decode_calls": 6.333333333333333
+        }
+      }
+    },
+    {
+      "draft_k": 32,
+      "median_total_seconds": 0.6378422498237342,
+      "tokens_per_second": 602.0297340072992,
+      "wall_clock_speedup": 2.345526891714355,
+      "mean_acceptance_rate": 0.8674284652545522,
+      "mean_target_decode_calls": 5.666666666666667,
+      "target_call_reduction": 0.9114583333333334,
+      "greedy_exact_match_rate": 1.0,
+      "rollback_events": 5,
+      "request_telemetry": {
+        "request_count": 12,
+        "latency_seconds": {
+          "p50": 0.09940690000075847,
+          "p95": 0.15039898003451527,
+          "mean": 0.10630704163728903
+        },
+        "time_to_first_token_seconds": {
+          "p50": 0.04328224994242191,
+          "p95": 0.05220598499290645
+        },
+        "prefill_seconds": {
+          "p50": 0.007997600012458861,
+          "p95": 0.010835420060902833
+        },
+        "cache_peak_tokens": {
+          "target_max": 82,
+          "draft_max": 82
+        },
+        "decoder_health": {
+          "acceptance_rate": 0.8674284652545522,
+          "rollback_rate_per_round": 0.29411764705882354,
+          "rollback_rate_per_proposed_token": 0.011467889908256881,
+          "mean_target_decode_calls": 5.666666666666667
+        }
+      }
+    }
+  ]
+}

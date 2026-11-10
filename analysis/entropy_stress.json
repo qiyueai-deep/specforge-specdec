@@ -1,0 +1,70 @@
+{
+  "rows": {
+    "template": {
+      "entropy": {
+        "tokens": 17049,
+        "vocab_size": 247,
+        "unigram_entropy_nats": 5.069686525224384,
+        "bigram_conditional_entropy_nats": 0.6374896308081187,
+        "predictability": 0.8742546254810294
+      },
+      "vocab_size": 247,
+      "target_validation_ce": 0.11031094193458557,
+      "alignment_t1": {
+        "temperature": 1.0,
+        "sum_min_p_q": 0.9845036533143785,
+        "tv": 0.015496377522746721,
+        "kl_target_to_draft": 0.01348452197594775,
+        "top1_agreement": 0.9789496527777778,
+        "pinsker_acceptance_lower_bound": 0.9178887280090372,
+        "tokens": 4608
+      },
+      "greedy_acceptance": 0.9804355850867479,
+      "greedy_exact_match": true,
+      "stochastic_acceptance": 0.9806201550387597,
+      "pinsker_lower_bound": 0.9178887280090372,
+      "speedups": {
+        "k4": 1.330710429962856,
+        "k8": 1.5530828977599997,
+        "k16": 2.0140200870569753,
+        "k28": 2.297399018657164
+      }
+    },
+    "rich": {
+      "entropy": {
+        "tokens": 30002,
+        "vocab_size": 260,
+        "unigram_entropy_nats": 5.422621359467904,
+        "bigram_conditional_entropy_nats": 1.6682687176927264,
+        "predictability": 0.6923501371195819
+      },
+      "vocab_size": 260,
+      "target_validation_ce": 3.737927516301473,
+      "alignment_t1": {
+        "temperature": 1.0,
+        "sum_min_p_q": 0.7368950578901503,
+        "tv": 0.26310494873258805,
+        "kl_target_to_draft": 0.21267363760206434,
+        "top1_agreement": 0.5601128472222222,
+        "pinsker_acceptance_lower_bound": 0.6739067329719423,
+        "tokens": 4608
+      },
+      "greedy_acceptance": 0.7012419912974955,
+      "greedy_exact_match": true,
+      "stochastic_acceptance": 0.7279251815098253,
+      "pinsker_lower_bound": 0.6739067329719423,
+      "speedups": {
+        "k4": 0.707400027548964,
+        "k8": 0.6501215356239497,
+        "k16": 0.515546606575124,
+        "k28": 0.3856898091800023
+      }
+    }
+  },
+  "rich_train_seconds": 164.653849999886,
+  "rich_steps": [
+    140,
+    100,
+    140
+  ]
+}

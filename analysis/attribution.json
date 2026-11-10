@@ -1,0 +1,75 @@
+{
+  "micro": {
+    "target_single_token_seconds": 0.0038751499960199,
+    "draft_single_token_seconds": 0.0006955499993637204,
+    "target_block_seconds_by_k": {
+      "1": 0.003907599952071905,
+      "4": 0.005360000068321824,
+      "8": 0.00686515006236732,
+      "16": 0.008176450035534799,
+      "28": 0.011407250072807074,
+      "32": 0.012741949991323054
+    },
+    "verify_intercept_seconds": 0.004130155489900258,
+    "verify_slope_seconds_per_token": 0.0002660389577867913,
+    "verify_linear_r_squared": 0.98785426038557,
+    "torch_threads": 1
+  },
+  "baseline_seconds": 1.5838207001797855,
+  "chunked_seconds": 0.12166340020485222,
+  "dispatch_overhead_fraction": 0.9231836026697708,
+  "rows": [
+    {
+      "k": 4,
+      "speculative_seconds": 1.2077541002072394,
+      "measured_speedup": 1.3113767942563943,
+      "block_forward_ms": 5.360000068321824,
+      "amortisation_factor": 2.891902945242447,
+      "predicted_compute_ratio": 1.5241014942998807
+    },
+    {
+      "k": 8,
+      "speculative_seconds": 0.9426136999391019,
+      "measured_speedup": 1.6802436674558296,
+      "block_forward_ms": 6.86515006236732,
+      "amortisation_factor": 4.515735225963729,
+      "predicted_compute_ratio": 2.05151982212877
+    },
+    {
+      "k": 12,
+      "speculative_seconds": 0.7989518998656422,
+      "measured_speedup": 1.9823730320262494,
+      "block_forward_ms": 12.741949991323054,
+      "amortisation_factor": 3.6495041955042478,
+      "predicted_compute_ratio": 1.963305630107976
+    },
+    {
+      "k": 20,
+      "speculative_seconds": 0.7788796001113951,
+      "measured_speedup": 2.0334602420621466,
+      "block_forward_ms": 12.741949991323054,
+      "amortisation_factor": 6.08250699250708,
+      "predicted_compute_ratio": 2.606298430331847
+    },
+    {
+      "k": 28,
+      "speculative_seconds": 0.7568868000525981,
+      "measured_speedup": 2.092546335951058,
+      "block_forward_ms": 11.407250072807074,
+      "amortisation_factor": 9.511862999059922,
+      "predicted_compute_ratio": 3.1697808451077205
+    },
+    {
+      "k": 32,
+      "speculative_seconds": 0.7090161996893585,
+      "measured_speedup": 2.2338286499994013,
+      "block_forward_ms": 12.741949991323054,
+      "amortisation_factor": 9.732011188011327,
+      "predicted_compute_ratio": 3.231719536202523
+    }
+  ],
+  "compile_control": {
+    "available": false,
+    "reason": "InductorError: RuntimeError: Compiler: cl is not found.\n\nSet TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you're reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS=\"+dynamo\"\n"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "greedy_exact_equivalence": [
+    {
+      "draft_k": 1,
+      "exact_matches": 10,
+      "total": 10
+    },
+    {
+      "draft_k": 2,
+      "exact_matches": 10,
+      "total": 10
+    },
+    {
+      "draft_k": 4,
+      "exact_matches": 10,
+      "total": 10
+    },
+    {
+      "draft_k": 6,
+      "exact_matches": 10,
+      "total": 10
+    }
+  ],
+  "all_greedy_cases_pass": true,
+  "rejection_sampling_identity_max_abs_error": 8.940696716308594e-08,
+  "rejection_sampling_identity_pass": true,
+  "tokenizer_vocab_size": 247
+}
