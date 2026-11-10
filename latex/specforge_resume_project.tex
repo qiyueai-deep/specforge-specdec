@@ -1,0 +1,36 @@
+\documentclass[10pt,a4paper]{ctexart}
+\usepackage[a4paper,left=1.45cm,right=1.45cm,top=1.35cm,bottom=1.35cm]{geometry}
+\usepackage{enumitem,xcolor,hyperref,tabularx,amsmath}
+\definecolor{heading}{HTML}{1F2937}
+\definecolor{accent}{HTML}{1D4ED8}
+\definecolor{muted}{HTML}{4B5563}
+\hypersetup{colorlinks=true,urlcolor=accent}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=1.45em,itemsep=.32em,topsep=.3em,parsep=0pt}
+\renewcommand{\baselinestretch}{1.1}
+\newcommand{\metric}[1]{\textbf{\color{accent}#1}}
+\begin{document}
+
+{\fontsize{14pt}{17pt}\selectfont\bfseries\color{heading} SpecForge：基于知识蒸馏与推测解码的 Transformer CPU 推理优化系统}\hfill{\small 独立开发}\par
+\vspace{.3em}\hrule\vspace{.55em}
+\textbf{技术栈：}PyTorch；Speculative Decoding；Knowledge Distillation；KV Cache；Rejection Sampling；Survival Analysis；Bellman Dynamic Programming；CPU Profiling
+
+\vspace{.4em}
+\textbf{项目背景：}针对大模型自回归解码在 batch=1 场景下逐 token 调用目标模型的问题，构建“草稿候选生成—目标模型并行验证—接受/拒绝修正—KV Cache 回滚”的完整推测解码（Speculative Decoding）闭环，并以风险集统计口径、成本模型与输出分布等价检验支撑全部性能结论。
+
+\vspace{.35em}
+\textbf{工作内容与成果：}
+\begin{itemize}
+  \item \textbf{双模型与增量推理：}从零实现 Target Transformer（\metric{4,828,928} 参数，$d=256,L=6,H=8$）与 Draft Transformer（\metric{159,440} 参数，$d=80,L=2,H=4$），参数压缩比 \metric{$30.29\times$}；实现分块因果注意力、逐层 KV Cache 增量前向和 \texttt{truncate} 回滚。
+  \item \textbf{蒸馏训练：}实现 SFT $\rightarrow$ 温度缩放混合蒸馏（$T=2.0,\alpha=0.75$）与可切换的 TV-aware 目标（直接优化 $\sum\min(p,q)$）；验证集 Top-1 agreement \metric{98.35\%}，$\mathrm{KL}(T\Vert S)$ \metric{0.0480}；4 目标 $\times$ 2 seed 消融证实 Pinsker 下界在全部目标上成立。
+  \item \textbf{接受过程生存分析：}发现并修正旧口径 $\text{accepted}/\text{proposed}$ 将右删失 token 计入拒绝的统计错误，改为\textbf{风险集口径} \metric{accepted/verified}；用 Kaplan--Meier 估计逐位置 hazard 并做似然比检验，实测接受率稳定在 \metric{98.6\%--99.2\%}、常数 hazard 不被拒绝，有限长度 Monte Carlo 与实测目标调用平均绝对误差 \metric{0.172} 轮。
+  \item \textbf{成本感知自适应 K：}逐轮实测块成本 $C(K)$（$R^2=0.986$），以 $K^*=\arg\min C(K)/(E[A(K)]{+}1)$ 与有限时域 Bellman 方程 $V(n)=\min_K[C(K)+E[V(n{-}A{-}1)]]$ 求最优策略，固定 K 为其策略子集；calibration/held-out 强制分离，双模式均按此协议报告：贪婪模式校准选出 $K{=}32$，held-out 实测 \metric{$2.358\times$（CI $[2.02,2.78]$）}加速，输出 \metric{100\%} 逐 token 等价（正确性锚点）。
+  \item \textbf{分布偏移压力测试：}构造高熵语料（条件熵 $0.637{\to}1.668$）重训双模型，接受率由 98\% 跌至 70\%、最优加速由 \metric{$2.297\times$} 跌至 \metric{$0.707\times$（负加速）}，证明原加速高度依赖低熵语料；hazard 偏移下自适应策略将固定 $K{=}28$ 的 $0.760\times$ 负加速修正为 $0.927\times$。
+  \item \textbf{随机模式基准与等价检验：}随机拒绝采样作为第二正式基准，held-out \metric{$2.723\times$（CI $[2.64,2.79]$）}，正确性判据为解码器级输出分布等价检验（TV${=}0.030$，参数自助 $p{=}1.0$ 不拒绝等价），与贪婪模式的序列等价判据明确区分；归因对照量化 dispatch 摊销占比 \metric{92.3\%}，并报告 target token ratio（$K{=}32$ 时 114.6\%）。
+  \item \textbf{可观测性与复现：}自动采集 TTFT、延迟 P50/P95、风险集接受率、右删失比例、回滚率、目标调用数与双 KV Cache 峰值 token；\textbf{46 个单元测试全部通过}，全部结论由一键研究流水线复现。
+\end{itemize}
+
+\vfill
+{\footnotesize\color{muted}\textbf{说明：}数据来自程序化中文技术语料、自研微型 Transformer 与固定单线程 CPU 自建离线基准，全部数字带自助置信区间并可一键复现；用于验证算法与工程闭环，不表述为生产大模型线上收益。}
+\end{document}
