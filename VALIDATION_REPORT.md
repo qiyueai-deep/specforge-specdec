@@ -28,7 +28,7 @@ CPU 基准固定为 1 个 Torch 线程、6 条 prompt、prompt 长度 18、`NEW_
 
 ## v3 研究改造验证（2026-11-09）
 
-以上 2026-08-27 的记录保留为历史复现证据。v3 改造后，正式统计口径与结论由以下实测支撑（事实源 `analysis/pipeline.log`，全部步骤 EXIT=0，单元测试 **46 个通过 + 2 跳过**）：
+以上 2026-08-27 的记录保留为历史复现证据。v3 改造后，正式统计口径与结论由以下实测支撑（事实源 `analysis/pipeline.log`，全部步骤 EXIT=0，单元测试 **46 个用例，45 通过 + 1 跳过**；跳过项为 `test_compiled_greedy_matches_eager`，本机无 C++ 编译器故 `torch.compile` CPU 后端不可用）：
 
 **统计口径修正：**
 

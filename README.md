@@ -33,7 +33,7 @@
 
 ## v3 研究改造（2026-11-09）
 
-在原实现之上完成六个方向的改造，全部结论由 `analysis/` 下 v2 产物与 `run_research_pipeline.py` 一键复现（单元测试 46 个全部通过）：
+在原实现之上完成六个方向的改造，全部结论由 `analysis/` 下 v2 产物与 `run_research_pipeline.py` 一键复现（单元测试 46 个用例）：
 
 1. **接受过程生存分析（`specforge/stats.py`，`analyze_acceptance_theory.py`）：** 右删失修正、风险集口径、Kaplan–Meier hazard、似然比检验、Wilson CI。结论：旧「hazard 随深度衰减」是删失伪影；实测常数 hazard 不被拒绝，风险集接受率 98.6%–99.2%。产物 `analysis/theory_check_v2.*`；旧 `theory_check.md`、`distill_metrics.md`、`adaptive_k.json` 均为 legacy，已被 v2 取代。
 2. **成本感知自适应 K（`specforge/costs.py`，`adaptive_k_benchmark.py`）：** 逐轮实测 C(K)、`K*=argmin C(K)/(E[A]+1)`、有限时域 Bellman DP、calibration/held-out 分离、交错计时与配对自助 CI。结论：平稳 hazard 下固定 K 已接近最优；可复现收益是 hazard 偏移时避免长 K 的负加速（hard 组固定 K=28 为 0.760×，自适应 0.927×）。产物 `analysis/adaptive_k_v2.*`、`artifacts/k_policy.json`。
